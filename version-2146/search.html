@@ -1,0 +1,213 @@
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>影片搜索-欧美电影大全-高分电影排行榜-高清影片在线观看</title>
+  <meta name="description" content="欧美电影大全页面整合欧美电影内容，按评分、热度和题材形成清晰分类。">
+  <meta name="keywords" content="欧美电影大全,高分电影排行榜,高清影片在线观看,欧美电影,电影榜单,电影大全,精选影片,影片搜索">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+    <body>
+          <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="./index.html" aria-label="欧美电影大全">
+          <span class="logo-icon">▶</span>
+          <span class="logo-text">欧美电影大全</span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html" class="nav-link ">首页</a>
+<a href="./categories.html" class="nav-link ">分类</a>
+<a href="./ranking.html" class="nav-link ">排行榜</a>
+<a href="./search.html" class="nav-link is-active">搜索</a>
+          <div class="nav-dropdown">
+            <button type="button" class="nav-link nav-trigger">专题</button>
+            <div class="nav-dropdown-panel">
+              <a href="./category-high-score.html">高分电影</a>
+<a href="./category-hot-blockbuster.html">热播大片</a>
+<a href="./category-suspense-crime.html">悬疑犯罪</a>
+<a href="./category-action-adventure.html">动作冒险</a>
+<a href="./category-romance-drama.html">爱情剧情</a>
+<a href="./category-comedy-life.html">喜剧生活</a>
+<a href="./category-sci-fi-fantasy.html">科幻奇幻</a>
+<a href="./category-horror-thriller.html">恐怖惊悚</a>
+            </div>
+          </div>
+        </nav>
+        <form class="header-search" action="./search.html" method="get">
+          <input name="q" type="search" placeholder="搜索影片..." autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <button type="button" class="menu-toggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-panel" hidden>
+        <form class="mobile-search" action="./search.html" method="get">
+          <input name="q" type="search" placeholder="搜索影片..." autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <nav aria-label="移动端导航">
+          <a href="./index.html" class="mobile-link ">首页</a>
+<a href="./categories.html" class="mobile-link ">分类</a>
+<a href="./ranking.html" class="mobile-link ">排行榜</a>
+<a href="./search.html" class="mobile-link is-active">搜索</a>
+        </nav>
+      </div>
+    </header>
+          <main>
+      <section class="page-hero search-hero">
+        <div>
+          <p class="section-kicker">Search</p>
+          <h1>搜索影片</h1>
+          <p>欧美电影大全页面整合欧美电影内容，按评分、热度和题材形成清晰分类。</p>
+        </div>
+      </section>
+      <section class="section-wrap">
+        <div class="search-panel">
+          <input id="searchInput" type="search" placeholder="输入片名、题材、标签、简介" autocomplete="off">
+          <select id="categorySelect" aria-label="选择分类">
+            <option value="">全部分类</option>
+            <option value="高分电影">高分电影</option>
+<option value="热播大片">热播大片</option>
+<option value="悬疑犯罪">悬疑犯罪</option>
+<option value="动作冒险">动作冒险</option>
+<option value="爱情剧情">爱情剧情</option>
+<option value="喜剧生活">喜剧生活</option>
+<option value="科幻奇幻">科幻奇幻</option>
+<option value="恐怖惊悚">恐怖惊悚</option>
+<option value="历史战争">历史战争</option>
+<option value="家庭治愈">家庭治愈</option>
+<option value="环球精选">环球精选</option>
+<option value="年度新片">年度新片</option>
+          </select>
+          <select id="regionSelect" aria-label="选择地区">
+            <option value="">全部地区</option>
+            <option value="中国">中国</option>
+<option value="中国内地">中国内地</option>
+<option value="中国台湾">中国台湾</option>
+<option value="中国台湾/日本">中国台湾/日本</option>
+<option value="中国台湾/美国">中国台湾/美国</option>
+<option value="中国大陆">中国大陆</option>
+<option value="中国大陆,香港">中国大陆,香港</option>
+<option value="中国大陆/台湾">中国大陆/台湾</option>
+<option value="中国大陆/日本">中国大陆/日本</option>
+<option value="中国大陆/香港">中国大陆/香港</option>
+<option value="中国香港">中国香港</option>
+<option value="中国香港/中国">中国香港/中国</option>
+<option value="中国香港/中国大陆">中国香港/中国大陆</option>
+<option value="中国香港/台湾">中国香港/台湾</option>
+<option value="中国香港/广东">中国香港/广东</option>
+<option value="中国香港/新加坡">中国香港/新加坡</option>
+<option value="中国香港/马来西亚">中国香港/马来西亚</option>
+<option value="丹麦">丹麦</option>
+<option value="丹麦/英国">丹麦/英国</option>
+<option value="乌克兰/波兰">乌克兰/波兰</option>
+<option value="伊朗">伊朗</option>
+<option value="伊朗,法国">伊朗,法国</option>
+<option value="俄罗斯">俄罗斯</option>
+<option value="俄罗斯/中国大陆">俄罗斯/中国大陆</option>
+<option value="加拿大">加拿大</option>
+<option value="加拿大/德国">加拿大/德国</option>
+<option value="加拿大/法国">加拿大/法国</option>
+<option value="加拿大/美国">加拿大/美国</option>
+<option value="匈牙利">匈牙利</option>
+<option value="华语">华语</option>
+<option value="南非">南非</option>
+<option value="印尼">印尼</option>
+<option value="印度">印度</option>
+<option value="印度尼西亚">印度尼西亚</option>
+<option value="古巴/西班牙">古巴/西班牙</option>
+<option value="台湾">台湾</option>
+<option value="埃及">埃及</option>
+<option value="埃及/法国">埃及/法国</option>
+<option value="墨西哥">墨西哥</option>
+<option value="墨西哥/美国">墨西哥/美国</option>
+<option value="多国">多国</option>
+<option value="奥地利">奥地利</option>
+<option value="尼日利亚/美国">尼日利亚/美国</option>
+<option value="巴基斯坦">巴基斯坦</option>
+<option value="巴西">巴西</option>
+<option value="希腊/澳大利亚">希腊/澳大利亚</option>
+<option value="德国">德国</option>
+<option value="德国/美国">德国/美国</option>
+<option value="德国/英国">德国/英国</option>
+<option value="意大利">意大利</option>
+<option value="意大利,法国">意大利,法国</option>
+<option value="意大利/中国大陆">意大利/中国大陆</option>
+<option value="意大利/德国">意大利/德国</option>
+<option value="意大利/法国">意大利/法国</option>
+<option value="意大利/英国">意大利/英国</option>
+<option value="挪威">挪威</option>
+<option value="挪威/英国">挪威/英国</option>
+<option value="捷克">捷克</option>
+<option value="新加坡">新加坡</option>
+<option value="新西兰">新西兰</option>
+<option value="日本">日本</option>
+<option value="日本/中国台湾">日本/中国台湾</option>
+<option value="日本/中国大陆">日本/中国大陆</option>
+<option value="欧洲">欧洲</option>
+<option value="比利时/法国">比利时/法国</option>
+<option value="毛里求斯">毛里求斯</option>
+<option value="法国">法国</option>
+<option value="法国,比利时">法国,比利时</option>
+<option value="法国/加拿大">法国/加拿大</option>
+<option value="法国/塞内加尔">法国/塞内加尔</option>
+<option value="法国/巴西">法国/巴西</option>
+<option value="法国/德国">法国/德国</option>
+<option value="法国/意大利">法国/意大利</option>
+<option value="法国/比利时">法国/比利时</option>
+<option value="法国/美国">法国/美国</option>
+<option value="法国/英国">法国/英国</option>
+<option value="波兰">波兰</option>
+<option value="波兰/德国">波兰/德国</option>
+<option value="波兰/美国">波兰/美国</option>
+<option value="泰国">泰国</option>
+          </select>
+        </div>
+        <div id="searchResults" class="movie-grid search-results"></div>
+      </section>
+    </main>
+    <script src="./assets/search-data.js"></script>
+          <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-logo" href="./index.html">欧美电影大全</a>
+          <p>欧美电影大全页面整合欧美电影内容，按评分、热度和题材形成清晰分类。</p>
+        </div>
+        <div class="footer-links">
+          <a href="./index.html">首页</a>
+          <a href="./categories.html">分类</a>
+          <a href="./ranking.html">排行榜</a>
+          <a href="./search.html">搜索</a>
+          <a href="./category-high-score.html">高分电影</a>
+<a href="./category-hot-blockbuster.html">热播大片</a>
+<a href="./category-suspense-crime.html">悬疑犯罪</a>
+<a href="./category-action-adventure.html">动作冒险</a>
+<a href="./category-romance-drama.html">爱情剧情</a>
+<a href="./category-comedy-life.html">喜剧生活</a>
+<a href="./category-sci-fi-fantasy.html">科幻奇幻</a>
+<a href="./category-horror-thriller.html">恐怖惊悚</a>
+<a href="./category-history-war.html">历史战争</a>
+<a href="./category-family-healing.html">家庭治愈</a>
+<a href="./category-global-cinema.html">环球精选</a>
+<a href="./category-new-release.html">年度新片</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 欧美电影大全</div>
+    </footer>
+      <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    </body>
+    </html>
